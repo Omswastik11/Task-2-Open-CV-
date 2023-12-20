@@ -7,7 +7,7 @@ def hello(x):
 	#only for referece
 	print("")
 
-#initialisation of the camera
+#initialising  the camera
 cap = cv2.VideoCapture(0)
 bars = cv2.namedWindow("bars")
 
@@ -18,7 +18,7 @@ cv2.createTrackbar("lower_hue","bars",68,180, hello)
 cv2.createTrackbar("lower_saturation","bars",55, 255, hello)
 cv2.createTrackbar("lower_value","bars",54, 255, hello)
 
-#Capturing the initial frame for creation of background
+#Capturing the initial frame to create background
 while(True):
 	cv2.waitKey(1000)
 	ret,init_frame = cap.read()
@@ -26,7 +26,7 @@ while(True):
 	if(ret):
 		break
 
-# Start capturing the frames for actual magic!!
+# Start capturing the frames for the magic!!
 while(True):
 	ret,frame = cap.read()
 	inspect = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
